@@ -1023,6 +1023,21 @@ jobs:
             break-inside: avoid;
             page-break-inside: avoid;
           }
+          /* Un tableau ne se coupe pas : s'il ne tient pas en bas de page, il
+             passe entier à la suivante. Seul un tableau plus haut qu'une page
+             se coupe encore, et alors entre deux lignes, jamais au milieu
+             d'une ligne. */
+          table,
+          tr {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
+          /* Un titre reste avec ce qui le suit : sans cela, un tableau renvoyé
+             à la page suivante laisserait son titre seul en bas de page. */
+          h1, h2, h3, h4, h5, h6 {
+            break-after: avoid;
+            page-break-after: avoid;
+          }
           CSS
 
           npx --yes "md-to-pdf@${MD_TO_PDF_VERSION}" support-de-cours.md \
