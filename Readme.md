@@ -1,6 +1,8 @@
-<p align="center">
-  <img src="https://github.com/DiginamicAcademy/Cours---Introduction---Culture-Geek/blob/main/res/logo.png?raw=true" alt="Culture geek">
-</p>
+<center>
+
+  ![Culture geek](./res/logo.png)
+
+</center>
 
 # Culture Geek
 
@@ -8,6 +10,7 @@
 
 À la fin de ce cours, vous serez capable de :
 
+- citer des femmes qui ont façonné l'informatique, et expliquer pourquoi elles restent méconnues ;
 - définir ce qu'est un ordinateur et reconnaître les ordinateurs qui vous entourent ;
 - trouver et lire une documentation, décoder un message d'erreur et poser une bonne question ;
 - utiliser l'IA comme un assistant sans nuire à votre apprentissage ni à la confidentialité ;
@@ -17,8 +20,9 @@
 
 ### Comment lire ce cours
 
-Le cours est découpé en six parties, indépendantes mais pensées pour être lues dans l'ordre :
+Le cours s'ouvre sur un préambule, puis se découpe en six parties, indépendantes mais pensées pour être lues dans l'ordre :
 
+0. [La tech n'existerait pas sans les femmes](#0-la-tech-nexisterait-pas-sans-les-femmes)
 1. [C'est quoi un ordinateur ?](#1-cest-quoi-un-ordinateur-)
 2. [RTFM : la doc, c'est la base](#2-rtfm--la-doc-cest-la-base)
 3. [L'IA n'est pas votre amie (mais peut le devenir)](#3-lia-nest-pas-votre-amie-mais-peut-le-devenir)
@@ -27,6 +31,83 @@ Le cours est découpé en six parties, indépendantes mais pensées pour être l
 6. [Bonnes pratiques](#6-bonnes-pratiques)
 
 Les questions posées en séance sont reprises dans des encadrés **« 🤔 À vous »** : essayez d'y répondre avant d'ouvrir la réponse. Une [auto-évaluation](#auto-évaluation) en fin de document permet de vérifier ce que vous avez retenu.
+
+---
+
+## 0. La tech n'existerait pas sans les femmes
+
+> **🤔 À vous :** citez de tête cinq personnes qui ont marqué l'histoire de l'informatique. Combien de femmes dans votre liste ?
+
+Si votre liste ressemble à « Turing, Jobs, Gates, Torvalds, Zuckerberg », c'est le cas de la plupart des gens. Pourtant, des femmes ont contribué à l'informatique à chacune de ses étapes, du premier programme à l'IA moderne.
+
+### Les pionnières
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1843 | **Ada Lovelace** | le premier programme publié, pour la machine analytique de Charles Babbage |
+| 1942 | **Hedy Lamarr** | un brevet de saut de fréquence, déposé avec le compositeur George Antheil : c'est le principe qu'utilise le Bluetooth |
+| 1946 | **Les six programmeuses de l'ENIAC** | la programmation du premier ordinateur électronique généraliste |
+| 1952 | **Grace Hopper** | le premier compilateur, puis le langage COBOL |
+
+Attention aux raccourcis : Hedy Lamarr n'a pas inventé le saut de fréquence, qui existait avant son brevet, et contrairement à ce qu'on lit souvent, le Wi-Fi n'en découle pas.
+
+Le *bug* de 1947 du [petit lexique geek](#petit-lexique-geek) ? Ce sont des techniciens du Harvard Mark II, l'ordinateur sur lequel travaillait Grace Hopper, qui ont trouvé le papillon de nuit coincé dans un relais… et l'ont scotché dans le journal de bord. Grace Hopper n'a ni trouvé l'insecte ni inventé le mot (les ingénieurs parlaient déjà de *bugs* au temps d'Edison), mais c'est elle qui a rendu l'histoire célèbre.
+
+### Direction la Lune
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1962 | **Katherine Johnson** | vérifie à la main les trajectoires calculées par l'ordinateur pour le vol de John Glenn |
+| années 1960 | **Dorothy Vaughan** | apprend le FORTRAN, puis le fait apprendre à son équipe quand les ordinateurs IBM arrivent à la NASA |
+| 1969 | **Margaret Hamilton** | dirige l'équipe qui écrit le logiciel de vol d'Apollo 11, et popularise le terme *software engineering* |
+
+Leur histoire, et celle de Mary Jackson, est racontée dans le film *Les Figures de l'ombre* (2016).
+
+### Dans votre ordinateur et sur le réseau
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1972 | **Karen Spärck Jones** | l'IDF, à la base du classement des résultats des moteurs de recherche |
+| 1980 | **Adele Goldberg** | Smalltalk, qui popularise la programmation orientée objet |
+| 1984 | **Susan Kare** | les icônes du premier Macintosh : la corbeille, le Mac qui sourit… |
+| 1984 | **Elizabeth Feinler** | les domaines de premier niveau : `.com`, `.org`, `.edu`… |
+| 1985 | **Sophie Wilson** | le jeu d'instructions ARM, présent dans presque tous les smartphones |
+| 1985 | **Radia Perlman** | le Spanning Tree Protocol, qui empêche les réseaux Ethernet de tourner en boucle |
+| 1987 | **Barbara Liskov** | le principe de substitution, le **L** de SOLID |
+
+### Côté jeu vidéo
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1980 | **Roberta Williams** | *Mystery House*, premier jeu d'aventure graphique, puis la série *King's Quest* |
+| 1982 | **Carol Shaw** | *River Raid*, l'une des premières conceptrices de jeux vidéo |
+
+### Aujourd'hui
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 2009 | **Fei-Fei Li** | ImageNet, la base d'images qui a lancé l'essor de l'IA moderne |
+| 2018 | **Joy Buolamwini** et **Timnit Gebru** | la preuve que la reconnaissance faciale se trompe bien plus sur les femmes noires |
+| années 2010 | **Parisa Tabriz** | la sécurité de Google Chrome, avec « Security Princess » sur sa carte de visite |
+
+### Et en France ?
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1961 | **Marion Créhange** | l'une des toutes premières thèses d'informatique en France, souvent présentée comme la première |
+| 1971 | **Alice Recoque** | la conception du mini-ordinateur Mitra 15 ; le supercalculateur exaflopique français porte son nom |
+| 2009 | **Ludivine Crépin** | les systèmes multi-agents hippocratiques (HiMAS) : des agents logiciels qui protègent les données personnelles de leurs utilisateurs |
+
+### Pourquoi les connaît-on si peu ?
+
+> **🤔 À vous :** avant de lire la suite, cherchez des raisons pour lesquelles ces noms sont si peu cités.
+
+- Les six programmeuses de l'ENIAC ne sont même pas présentées lors de la démonstration publique de 1946.
+- Stephanie Shirley, qui fonde en 1962 une société de logiciels, signe ses courriers « Steve » pour être prise au sérieux.
+- L'**effet Matilda**, décrit par l'historienne Margaret Rossiter en 1993 : le travail des femmes scientifiques est minimisé, ou attribué à des hommes.
+- Dans les années 1980, l'ordinateur personnel est vendu comme un jouet **pour garçons**. Aux États-Unis, la part de femmes parmi les diplômés en informatique passe de 37 % en 1984 à environ 18 % à la fin des années 2000, et n'est remontée qu'à 23 % en 2022.
+
+Aux débuts de l'informatique, programmer était vu comme un travail de bureau « féminin ». Le métier s'est masculinisé en devenant prestigieux.
 
 ---
 
@@ -638,6 +719,7 @@ Dans ce métier, une partie de ce que vous apprenez aujourd'hui sera obsolète d
 
 ## Ce qu'il faut retenir
 
+0. La tech s'est construite **avec** les femmes, même quand l'histoire les a oubliées.
 1. Un ordinateur est un **concept**, et il y en a partout.
 2. **RTFM** : la documentation est votre première source.
 3. L'IA est un **assistant**, pas un pilote : vous restez responsable.
@@ -651,27 +733,31 @@ Dans ce métier, une partie de ce que vous apprenez aujourd'hui sera obsolète d
 
 Répondez de tête, puis ouvrez la réponse. Si vous hésitez, relisez la partie indiquée.
 
-1. Pourquoi une carte bancaire est-elle un ordinateur ? *(partie 1)*
-2. Quelle est la différence entre 1 Go et 1 Gio ? *(partie 1)*
-3. Dans le synopsis `cp [OPTION]... SOURCE... DIRECTORY`, que signifient `[ ]` et `...` ? *(partie 2)*
-4. Dans `bash: cd: too many arguments`, qui parle, et comment corriger `cd Mes Documents` ? *(partie 2)*
-5. Citez deux raisons pour lesquelles l'IA « n'est pas votre amie ». *(partie 3)*
-6. Quelle est la différence entre un white hat et un grey hat ? *(partie 4)*
-7. Qu'est-ce que le credential stuffing, et quelle habitude vous en protège ? *(partie 5)*
-8. Vous avez poussé une clé d'API sur GitHub. Suffit-il de la supprimer du dépôt ? *(partie 5)*
-9. Que signifie YAGNI ? *(partie 6)*
+1. Citez trois femmes qui ont marqué l'informatique, et ce qu'on leur doit. *(partie 0)*
+2. Qu'est-ce que l'effet Matilda ? *(partie 0)*
+3. Pourquoi une carte bancaire est-elle un ordinateur ? *(partie 1)*
+4. Quelle est la différence entre 1 Go et 1 Gio ? *(partie 1)*
+5. Dans le synopsis `cp [OPTION]... SOURCE... DIRECTORY`, que signifient `[ ]` et `...` ? *(partie 2)*
+6. Dans `bash: cd: too many arguments`, qui parle, et comment corriger `cd Mes Documents` ? *(partie 2)*
+7. Citez deux raisons pour lesquelles l'IA « n'est pas votre amie ». *(partie 3)*
+8. Quelle est la différence entre un white hat et un grey hat ? *(partie 4)*
+9. Qu'est-ce que le credential stuffing, et quelle habitude vous en protège ? *(partie 5)*
+10. Vous avez poussé une clé d'API sur GitHub. Suffit-il de la supprimer du dépôt ? *(partie 5)*
+11. Que signifie YAGNI ? *(partie 6)*
 
 <details>
 <summary>Voir les réponses</summary>
 
-1. Sa puce contient une unité de calcul, une mémoire de stockage et une interface d'entrée-sortie (le contact avec le terminal de paiement) : elle correspond au concept d'ordinateur.
-2. 1 Go vaut 1 000 Mo (système international), 1 Gio vaut 1 024 Mio (système binaire).
-3. `[ ]` indique un élément optionnel, `...` un élément répétable.
-4. C'est bash qui parle : l'espace sépare les arguments. Il faut écrire `cd "Mes Documents"`.
-5. Au choix : elle hallucine avec assurance, ses connaissances sont datées, elle a tendance à vous donner raison, elle peut vous empêcher d'apprendre, les données que vous lui confiez ne vous appartiennent plus tout à fait.
-6. Le white hat agit avec autorisation pour faire corriger les failles ; le grey hat agit sans autorisation, même sans intention de nuire, ce qui reste illégal.
-7. Des robots réessaient sur d'autres sites les identifiants volés sur un site. Un mot de passe unique par site (avec un gestionnaire) et la MFA vous en protègent.
-8. Non : la clé reste dans l'historique Git et a pu être copiée. Il faut la **révoquer** et en générer une nouvelle.
-9. *You Aren't Gonna Need It* : ne codez pas ce dont vous n'avez pas besoin maintenant.
+1. Au choix : Ada Lovelace (le premier programme publié), Grace Hopper (le premier compilateur), Margaret Hamilton (le logiciel de vol d'Apollo 11), Radia Perlman (le Spanning Tree Protocol), Barbara Liskov (le **L** de SOLID), Sophie Wilson (le jeu d'instructions ARM), Fei-Fei Li (ImageNet)…
+2. La tendance à minimiser le travail des femmes scientifiques, ou à l'attribuer à des hommes.
+3. Sa puce contient une unité de calcul, une mémoire de stockage et une interface d'entrée-sortie (le contact avec le terminal de paiement) : elle correspond au concept d'ordinateur.
+4. 1 Go vaut 1 000 Mo (système international), 1 Gio vaut 1 024 Mio (système binaire).
+5. `[ ]` indique un élément optionnel, `...` un élément répétable.
+6. C'est bash qui parle : l'espace sépare les arguments. Il faut écrire `cd "Mes Documents"`.
+7. Au choix : elle hallucine avec assurance, ses connaissances sont datées, elle a tendance à vous donner raison, elle peut vous empêcher d'apprendre, les données que vous lui confiez ne vous appartiennent plus tout à fait.
+8. Le white hat agit avec autorisation pour faire corriger les failles ; le grey hat agit sans autorisation, même sans intention de nuire, ce qui reste illégal.
+9. Des robots réessaient sur d'autres sites les identifiants volés sur un site. Un mot de passe unique par site (avec un gestionnaire) et la MFA vous en protègent.
+10. Non : la clé reste dans l'historique Git et a pu être copiée. Il faut la **révoquer** et en générer une nouvelle.
+11. *You Aren't Gonna Need It* : ne codez pas ce dont vous n'avez pas besoin maintenant.
 
 </details>

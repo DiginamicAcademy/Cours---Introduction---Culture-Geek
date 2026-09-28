@@ -5,6 +5,7 @@ style: |
   section {background-color: #121114}
   h1,h2,h3 {color: #8393f0}
   p,ul,li,td,th {color: #ccc}
+  section table {font-size: 0.85em}
   section table td {background-color: #121114}
   section table th {background-color: #272133; font-weight: bolder}
   pre {background-color: #17151a; color: #ccc}
@@ -16,7 +17,7 @@ footer: "![height:20px](https://raw.githubusercontent.com/DiginamicInternal/Publ
 
 <center>
 
-![Culture geek](https://github.com/DiginamicAcademy/Cours---Introduction---Culture-Geek/blob/main/res/logo.png?raw=true)
+![Culture geek](./res/logo.png)
 
 </center>
 
@@ -24,12 +25,144 @@ footer: "![height:20px](https://raw.githubusercontent.com/DiginamicInternal/Publ
 
 # Programme
 
+0. La tech n'existerait pas sans les femmes
 1. C'est quoi un ordinateur ?
 2. RTFM : la doc, c'est la base
 3. L'IA n'est pas votre amie (mais peut le devenir)
 4. Le hacking : une histoire de chapeaux
 5. Sécurité et hygiène numérique
 6. Bonnes pratiques
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+Citez des personnes qui ont marqué l'histoire de l'informatique.
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+Citez des personnes qui ont marqué l'histoire de l'informatique.
+
+Combien de **femmes** dans votre liste ?
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Les pionnières
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1843 | **Ada Lovelace** | le premier programme publié |
+| 1942 | **Hedy Lamarr** | un brevet de saut de fréquence, principe du Bluetooth |
+| 1946 | **Six programmeuses** | la programmation de l'ENIAC |
+| 1952 | **Grace Hopper** | le premier compilateur, puis COBOL |
+
+> Le *bug* de 1947 ? Trouvé sur le Mark II, où travaillait Grace Hopper.
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Direction la Lune
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1962 | **Katherine Johnson** | vérifie à la main les trajectoires calculées par l'ordinateur pour le vol de John Glenn |
+| années 60 | **Dorothy Vaughan** | apprend le FORTRAN, puis le fait apprendre à son équipe quand les ordinateurs IBM arrivent à la NASA |
+| 1969 | **Margaret Hamilton** | dirige l'équipe qui écrit le logiciel de vol d'Apollo 11, et popularise le terme *software engineering* |
+
+> À voir : *Les Figures de l'ombre* (2016)
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Dans votre ordinateur
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1980 | **Adele Goldberg** | Smalltalk, qui popularise la programmation objet |
+| 1984 | **Susan Kare** | les icônes du premier Macintosh |
+| 1985 | **Sophie Wilson** | l'architecture ARM de vos smartphones |
+| 1987 | **Barbara Liskov** | le principe de substitution, le **L** de SOLID |
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Sur le réseau
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1972 | **Karen Spärck Jones** | l'IDF, à la base du classement des résultats des moteurs de recherche |
+| 1984 | **Elizabeth Feinler** | les domaines de premier niveau : `.com`, `.org`, `.edu`... |
+| 1985 | **Radia Perlman** | le Spanning Tree Protocol, qui empêche les réseaux Ethernet de tourner en boucle |
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Côté jeu vidéo
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1980 | **Roberta Williams** | *Mystery House*, premier jeu d'aventure graphique, puis la série *King's Quest* |
+| 1982 | **Carol Shaw** | *River Raid*, l'une des premières conceptrices de jeux vidéo |
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Aujourd'hui
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 2009 | **Fei-Fei Li** | ImageNet, la base d'images qui a lancé l'essor de l'IA moderne |
+| 2018 | **Joy Buolamwini** et **Timnit Gebru** | la preuve que la reconnaissance faciale se trompe bien plus sur les femmes noires |
+| années 2010 | **Parisa Tabriz** | la sécurité de Google Chrome, avec « Security Princess » sur sa carte de visite |
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Et en France ?
+
+| Année | Qui ? | Ce qu'on lui doit |
+|---|---|---|
+| 1961 | **Marion Créhange** | l'une des toutes premières thèses d'informatique en France |
+| 1971 | **Alice Recoque** | la conception du mini-ordinateur Mitra 15 ; le supercalculateur exaflopique français porte son nom |
+| 2009 | **Ludivine Crépin** | les systèmes multi-agents hippocratiques (HiMAS), pour protéger la vie privée des utilisateurs |
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+Pourquoi les connaît-on si peu ?
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+Pourquoi les connaît-on si peu ?
+
+- Les programmeuses de l'ENIAC ne sont même pas présentées lors de la démonstration publique de 1946
+- Stephanie Shirley, qui fonde en 1962 une société de logiciels, signe ses courriers du prénom Steve pour être prise au sérieux
+- L'**effet Matilda** : le travail des femmes scientifiques est minimisé, ou attribué à des hommes
+
+---
+
+# 0. La tech n'existerait pas sans les femmes
+
+## Où sont passées les femmes ?
+
+- Aux débuts, programmer est vu comme un travail de bureau « féminin »
+- Dans les années 80, l'ordinateur personnel est vendu comme un jouet **pour garçons**
+- Aux États-Unis, la part de femmes parmi les diplômés en informatique passe de **37&nbsp;%** (1984) à **23&nbsp;%** (2022)
+
+> Le métier s'est masculinisé en devenant prestigieux.
 
 ---
 
@@ -151,12 +284,26 @@ Le programme et les données sont stockés **dans la même mémoire**.
 
 ## Les unités
 
+---
+
+# 1. C'est quoi un ordinateur ?
+
+## Les unités
+
 | Unité | Valeur (SI) | Valeur (binaire) |
 |---|---|---|
 | Ko / Kio | 1 000 octets | 1 024 octets |
 | Mo / Mio | 1 000 Ko | 1 024 Kio |
 | Go / Gio | 1 000 Mo | 1 024 Mio |
 | To / Tio | 1 000 Go | 1 024 Gio |
+
+---
+
+# 1. C'est quoi un ordinateur ?
+
+## Les couches
+
+Chaque couche **cache la complexité** de celle du dessous : c'est l'**abstraction**.
 
 ---
 
@@ -974,6 +1121,7 @@ Dans ce métier, ce que vous apprenez aujourd'hui sera en partie obsolète dans 
 
 # Ce qu'il faut retenir
 
+0. La tech s'est construite **avec** les femmes, même quand l'histoire les a oubliées
 1. Un ordinateur est un **concept**, et il y en a partout
 2. **RTFM** : la doc est votre première source
 3. L'IA est un **assistant**, pas un pilote : vous restez responsable
