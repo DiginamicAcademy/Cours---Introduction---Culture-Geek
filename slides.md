@@ -16,7 +16,7 @@ footer: "![height:20px](https://raw.githubusercontent.com/DiginamicInternal/Publ
 
 <center>
 
-![Culture geek](./res/logo.png)
+![Culture geek](https://github.com/DiginamicAcademy/Cours---Introduction---Culture-Geek/blob/main/res/logo.png?raw=true)
 
 </center>
 

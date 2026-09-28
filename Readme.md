@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./res/logo.png" alt="Culture geek">
+  <img src="https://github.com/DiginamicAcademy/Cours---Introduction---Culture-Geek/blob/main/res/logo.png?raw=true" alt="Culture geek">
 </p>
 
 # Culture Geek
