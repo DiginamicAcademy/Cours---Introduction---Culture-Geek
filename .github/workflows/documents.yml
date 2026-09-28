@@ -324,8 +324,10 @@ jobs:
       # fichier Markdown, et `./res/logo.png` doit y désigner la même image.
       #
       # `WHITE_STYLE` ne porte que ce qui ne dépend pas du fond (tailles de
-      # police…) : les couleurs restent celles du thème par défaut. Une règle de
-      # ce genre ajoutée au style de `slides.md` doit donc être reportée ici.
+      # police, encadré des citations…) : les couleurs restent celles du thème
+      # par défaut. La bordure verte des citations fait exception, lisible sur
+      # les deux fonds. Une règle de ce genre ajoutée au style de `slides.md`
+      # doit donc être reportée ici, à l'identique.
       #
       # Le remplacement du style est borné au front matter — le premier bloc
       # `---` du fichier. Sans cette borne, un bloc `style:` cité en exemple dans
@@ -341,6 +343,7 @@ jobs:
           WHITE_STYLE: |
             style: |
               section table {font-size: 0.85em}
+              blockquote {border: 2px green solid; border-left-width: 15px; padding: 0.5em 15px;font-style: italic }
         run: |
           awk '
             NR == 1 && $0 == "---" { fm = 1; print; next }
