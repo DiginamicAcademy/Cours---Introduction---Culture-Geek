@@ -543,8 +543,10 @@ jobs:
       # et la réponse disparaît du PDF. Chaque bloc est donc déplacé, déplié,
       # dans une annexe en fin de document. À sa place, un renvoi cliquable
       # porte son numéro (« Voir la réponse → annexe 3 »), de quoi le retrouver
-      # aussi sur une version imprimée. Chaque entrée d'annexe rappelle la
-      # section d'où elle vient et renvoie au texte.
+      # aussi sur une version imprimée. Chaque entrée d'annexe porte le titre de
+      # la section d'où elle vient et renvoie au texte ; les entrées sont
+      # regroupées sous le titre de leur chapitre, sans quoi les « Vous
+      # faites » ou « Exercice » de chaque chapitre ne se distingueraient plus.
       #
       # Seuls les blocs qui ouvrent leur ligne sont déplacés, les blocs
       # imbriqués restant avec leur parent. Tout `<details>` resté en place
@@ -582,7 +584,8 @@ jobs:
           const body = [];
           const annexes = [];
           let inFence = false;
-          let context = '';
+          let chapter = '';
+          let section = '';
           let block = null;
 
           // Le bloc complet est dans `block.lines` : il part en annexe, un
@@ -611,7 +614,7 @@ jobs:
               .join('\n')
               .replace(/^\s*\n|\n\s*$/g, '');
 
-            annexes.push({ n, summary, context: block.context || summary, content });
+            annexes.push({ n, summary, chapter: block.chapter, title: block.section || summary, content });
             body.push(
               `${block.indent}<p class="renvoi-annexe" id="pdf-renvoi-${n}"><a href="#pdf-annexe-${n}">${summary} → annexe ${n}</a></p>`,
               '',
@@ -638,18 +641,23 @@ jobs:
               continue;
             }
 
-            // La section courante : dernier titre, ou dernier intercalaire.
+            // Le chapitre courant (dernier intercalaire) et sa section (dernier
+            // titre). Le Readme, avant tout intercalaire, n'a pas de chapitre.
             const heading = line.match(/^#{1,6}\s+(.*?)(\s+#+)?\s*$/);
-            if (heading) context = heading[1];
+            if (heading) section = heading[1];
             const divider = line.match(/<div class="intercalaire"[^>]*><span>(.*)<\/span><\/div>/);
-            if (divider) context = unescapeHtml(divider[1]);
+            if (divider) {
+              chapter = unescapeHtml(divider[1]);
+              section = '';
+            }
 
             if (/^\s*<details\b/i.test(line)) {
               block = {
                 lines: [line],
                 depth: count(OPEN, line) - count(CLOSE, line),
                 indent: line.match(/^\s*/)[0],
-                context,
+                chapter,
+                section,
                 fenced: false,
               };
               if (block.depth <= 0) move();
@@ -660,18 +668,23 @@ jobs:
           }
 
           if (block) {
-            console.log(`::warning::<details> jamais refermé (section « ${block.context} ») : laissé en place.`);
+            console.log(`::warning::<details> jamais refermé (section « ${block.section || block.chapter} ») : laissé en place.`);
             body.push(...block.lines);
           }
 
           const out = [...body];
           if (annexes.length) {
             out.push('', '<div class="intercalaire" id="pdf-annexes"><span>Annexes</span></div>', '');
-            for (const { n, context: from, content } of annexes) {
+            let current = '';
+            for (const { n, chapter: from, title, content } of annexes) {
+              // Un titre de chapitre à chaque changement de chapitre ; ses
+              // entrées descendent alors d'un niveau.
+              if (from && from !== current) out.push(`## ${from}`, '');
+              current = from;
               out.push(
                 `<a id="pdf-annexe-${n}"></a>`,
                 '',
-                `## Annexe ${n} — ${from}`,
+                `${from ? '###' : '##'} Annexe ${n} — ${title}`,
                 '',
                 `<p class="retour-annexe"><a href="#pdf-renvoi-${n}">↩ Retour au texte</a></p>`,
                 '',
@@ -684,8 +697,8 @@ jobs:
           fs.writeFileSync(mdPath, forceOpen(out).join('\n'));
 
           console.log(`Blocs <details> déplacés en annexe : ${annexes.length}`);
-          for (const { n, summary, context: from } of annexes) {
-            console.log(`  ${n}. ${from} (« ${summary} »)`);
+          for (const { n, summary, chapter: from, title } of annexes) {
+            console.log(`  ${n}. ${from ? `${from} › ` : ''}${title} (« ${summary} »)`);
           }
           JS
 
