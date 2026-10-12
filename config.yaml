@@ -1,0 +1,18 @@
+course:
+  name: "Culture Geek"
+  RNCP:
+    - RNCP37873
+    - RNCP37674
+    - RNCP40573
+    - RNCP41879
+    - RNCP42463
+    - RNCP37680
+  RNCPBloc: []
+  timing: 0.5
+
+credits:
+  authors:
+    - name: Jean-François Vial
+      github:
+        - JeffDiginamic
+        - j33f
